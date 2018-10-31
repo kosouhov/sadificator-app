@@ -9,6 +9,7 @@
     />
     <div v-else class="picture">
       <div class="picture-container" :style="{backgroundImage: 'url(' + image + ')'}"></div>
+      <audio :src="require('./assets/sound.mp3')" autoplay></audio>
     </div>
   </div>
 </template>
