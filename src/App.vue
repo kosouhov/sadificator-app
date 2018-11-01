@@ -7,20 +7,26 @@
       :message="message"
       :button="button"
     />
-    <div v-else class="picture">
-      <div class="picture-container" :style="{backgroundImage: 'url(' + image + ')'}"></div>
-      <audio :src="require('./assets/sound.mp3')" autoplay></audio>
-    </div>
+    <Photo
+      v-else
+      :image="image"
+    />
+    <audio id="audio">
+      <source :src="require('./assets/sound.ogg')">
+      <source :src="require('./assets/sound.mp3')">
+    </audio>
   </div>
 </template>
 
 <script>
 import Upload from './components/Upload.vue'
+import Photo from './components/Photo.vue'
 
 export default {
   name: 'app',
   components: {
-    Upload
+    Upload,
+    Photo
   },
   data () {
     return {
@@ -54,6 +60,7 @@ export default {
       reader.readAsDataURL(file);
     },
     sadificate: function() {
+      document.getElementById('audio').play()
       this.upload_mode = false
     }
   }

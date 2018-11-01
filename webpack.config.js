@@ -61,6 +61,14 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.(mp3|ogg|aac|m4a)$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000,
+          name: '[name].[hash:7].[ext]'
+        }
+      },
+      {
         test: /\.(png|jpg|gif|svg)$/,
         loader: 'file-loader',
         options: {
