@@ -53,18 +53,20 @@ export default {
 		display: flex
 		align-items: baseline
 		justify-content: flex-start
+		flex-wrap: wrap
 	.header__title
+		margin-right: 20px
 		font-size: 29px
 		font-weight: 800
 		text-transform: uppercase
 	.header__subtitle
-		margin-left: 20px
 		font-size: 18px
 		font-weight: 300
 	.upload__content
 	.content
 	.content__input
 		display: flex
+		flex-wrap: wrap
 		padding-top: 100px
 	.content__input-hidden
 		display: none
@@ -76,6 +78,8 @@ export default {
 		width: 100%
 		max-width: 260px
 		height: 60px
+		margin-right: 20px
+		margin-bottom: 10px
 		line-height: 1
 		background-color: white
 		border-left: 60px solid rgb(0, 160, 107)
@@ -90,7 +94,7 @@ export default {
 		justify-content: center
 		width: 180px
 		height: 60px
-		margin-left: 20px
+		margin-bottom: 10px
 		line-height: 1
 		background-color: rgb(0, 160, 107)
 		border: none
